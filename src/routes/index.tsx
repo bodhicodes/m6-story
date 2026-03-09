@@ -80,6 +80,8 @@ const EcosystemSection = component$(
               color={eco.globe.color}
               glowColor={eco.globe.glowColor}
               highlightBounds={eco.globe.highlightBounds}
+              regions={eco.globe.regions}
+              pattern={eco.globe.pattern}
               isVisible={isVisible.value}
             />
           </div>

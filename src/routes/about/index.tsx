@@ -39,7 +39,7 @@ export default component$(() => {
           <p class="text-xs tracking-[0.3em] uppercase text-slate-200 mb-4 font-medium">
             Terra Studio · Module 6
           </p>
-          <h1 class="text-4xl sm:text-5xl font-serif font-bold text-white leading-tight mb-6">
+          <h1 class="text-4xl sm:text-5xl font-serif font-bold text-white  mb-6">
             Vanishing Earth
           </h1>
           <p class="text-xl text-slate-100 leading-relaxed">

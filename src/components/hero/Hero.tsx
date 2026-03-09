@@ -33,12 +33,10 @@ export const Hero = component$(() => {
       />
 
       {/* ── Overline label ───────────────────────────────────────── */}
-      <p class="text-sm tracking-[0.3em] uppercase text-slate-200 mb-6 font-medium">
-        A Visual Investigation
-      </p>
+
 
       {/* ── Main title ───────────────────────────────────────────── */}
-      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight max-w-4xl">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-none max-w-4xl">
         Vanishing Earth
       </h1>
 
@@ -48,12 +46,12 @@ export const Hero = component$(() => {
       </p>
 
       {/* ── Byline ───────────────────────────────────────────────── */}
-      <p class="mt-8 text-sm text-slate-200">
-        A capstone project exploring biodiversity tipping points
+      <p class="mt-8 text-base text-slate-200">
+        A capstone project from the Terra Studio exploring biodiversity tipping points
       </p>
 
       {/* ── Intro paragraph ──────────────────────────────────────── */}
-      <div class="mt-16 max-w-xl text-base text-slate-100 leading-relaxed space-y-4">
+      <div class="mt-4 max-w-xl text-base text-slate-100 leading-relaxed space-y-4">
         <p>
           Earth's most critical ecosystems — coral reefs, rainforests, polar
           ice, coastal wetlands, and grasslands — are approaching dangerous
