@@ -307,6 +307,24 @@ export default component$(() => {
               Built with Qwik, D3.js, Tailwind CSS, and TopoJSON.
               <br />A Terra Studio capstone project — AI + Storytelling.
             </p>
+
+            {/* Open source credits */}
+            <div class="flex items-center justify-center gap-4 mt-6 text-xs text-slate-600">
+              <span>MIT License · Open Source</span>
+              <span aria-hidden="true">·</span>
+              <a
+                href="https://github.com/bodhicodes/m6-story"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-slate-400 transition-colors"
+              >
+                GitHub
+              </a>
+              <span aria-hidden="true">·</span>
+              <a href="/about" class="hover:text-slate-400 transition-colors">
+                About this project
+              </a>
+            </div>
           </div>
         </div>
       </footer>
@@ -326,6 +344,11 @@ export const head: DocumentHead = {
       content:
         "An interactive scrollytelling exploration of five ecosystems approaching dangerous tipping points: coral reefs, the Amazon, Arctic ice, mangroves, and grasslands.",
     },
+    // Open Graph
+    {
+      property: "og:type",
+      content: "website",
+    },
     {
       property: "og:title",
       content: "Vanishing Earth — Biodiversity Tipping Points",
@@ -334,6 +357,36 @@ export const head: DocumentHead = {
       property: "og:description",
       content:
         "Scroll through five ecosystems on the edge of collapse. A data-driven visual story.",
+    },
+    {
+      property: "og:image",
+      content: "https://vanishing-earth.vercel.app/og-image.svg",
+    },
+    {
+      property: "og:image:width",
+      content: "1200",
+    },
+    {
+      property: "og:image:height",
+      content: "630",
+    },
+    // Twitter / X
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Vanishing Earth — Biodiversity Tipping Points",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Scroll through five ecosystems on the edge of collapse. A data-driven visual story.",
+    },
+    {
+      name: "twitter:image",
+      content: "https://vanishing-earth.vercel.app/og-image.svg",
     },
   ],
 };

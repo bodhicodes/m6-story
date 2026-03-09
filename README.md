@@ -47,8 +47,6 @@ Everything else — the scroll mechanics, globe rendering, animations, layout �
 - **[Tailwind CSS v4](https://tailwindcss.com/)** — Utility-first styling
 - **[Vercel Edge](https://vercel.com/docs/functions/edge-functions)** — Edge-rendered deployment
 
-The scroll-trigger system uses the browser's native [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) — no Scrollama or additional scroll libraries needed.
-
 ---
 
 ## Local Development
