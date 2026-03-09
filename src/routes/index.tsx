@@ -98,7 +98,7 @@ const EcosystemSection = component$(
               {eco.name}
             </h2>
 
-            <p class="mt-3 text-lg text-slate-400 italic">
+            <p class="mt-3 text-lg text-slate-100 italic">
               {eco.subtitle}
             </p>
           </div>
@@ -138,12 +138,12 @@ const EcosystemSection = component$(
           </div>
 
           {/* ── Key statistics — three-column callout ────────────── */}
-          <div class="grid grid-cols-3 gap-4 max-w-lg mx-auto">
+          <div class="flex flex-wrap justify-center gap-6 sm:gap-4 max-w-lg mx-auto">
             {eco.stats.map((stat, i) => (
               <div
                 key={i}
                 class={[
-                  "text-center transition-all duration-700 ease-out",
+                  "text-center transition-all duration-700 ease-out flex-1 min-w-[120px] sm:min-w-0",
                   isVisible.value
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-4",
@@ -158,7 +158,7 @@ const EcosystemSection = component$(
                 >
                   {stat.value}
                 </div>
-                <div class="text-sm text-slate-400 mt-1 leading-tight">
+                <div class="text-sm text-slate-100 mt-1 leading-tight">
                   {stat.label}
                 </div>
               </div>
@@ -188,20 +188,20 @@ export default component$(() => {
             <Hero />
           </div>
           {/* Right: globe */}
-          <div class="flex-1 flex items-center justify-center min-w-0 pr-8 pb-8">
+          <div class="flex-1 flex items-center justify-center min-w-0 lg:pr-8 pb-32 lg:pb-8">
             <OverviewGlobe />
           </div>
         </div>
 
         {/* ── Scroll indicator ────────────────────────────────────── */}
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <span class="text-[10px] tracking-[0.25em] uppercase text-slate-600 animate-pulse">
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none z-10">
+          <span class="text-[10px] tracking-[0.25em] uppercase text-slate-100 animate-pulse">
             Scroll
           </span>
           {/* Mouse icon with sliding dot */}
           <div class="w-[18px] h-[28px] rounded-full border border-slate-700 flex justify-center pt-[5px]">
             <div
-              class="w-[3px] h-[6px] bg-slate-500 rounded-full"
+              class="w-[3px] h-[6px] bg-slate-200 rounded-full"
               style={{ animation: "scrollDot 1.8s ease-in-out infinite" }}
             />
           </div>
@@ -220,7 +220,7 @@ export default component$(() => {
             The Window Is Closing
           </h2>
 
-          <p class="text-lg text-slate-400 leading-relaxed mb-6">
+          <p class="text-lg text-slate-100 leading-relaxed mb-6">
             These five ecosystems are not isolated crises. They are
             interconnected — the collapse of one accelerates the decline of
             others. Arctic ice loss warms the ocean, which bleaches coral.
@@ -228,23 +228,23 @@ export default component$(() => {
             conversion releases carbon, which melts more ice.
           </p>
 
-          <p class="text-lg text-slate-400 leading-relaxed mb-12">
+          <p class="text-lg text-slate-100 leading-relaxed mb-12">
             The science is clear about the thresholds. What remains
             uncertain is whether we will act before they are crossed.
           </p>
 
           {/* ── Summary: all ecosystems at a glance ────────────── */}
-          <div class="grid grid-cols-5 gap-2 max-w-lg mx-auto mb-16">
+          <div class="flex flex-wrap justify-center gap-4 sm:gap-6 max-w-lg mx-auto mb-16">
             {ecosystems.map((eco) => (
-              <div key={eco.id} class="flex flex-col items-center gap-2">
+              <div key={eco.id} class="flex items-center gap-2">
                 <div
-                  class="w-3 h-3 rounded-full"
+                  class="w-3 h-3 rounded-full flex-shrink-0"
                   style={{
                     backgroundColor: eco.globe.color,
                     boxShadow: `0 0 10px ${eco.globe.color}`,
                   }}
                 />
-                <span class="text-sm text-slate-400 leading-tight text-center">
+                <span class="text-sm text-slate-100 leading-tight">
                   {eco.name}
                 </span>
               </div>
@@ -253,10 +253,10 @@ export default component$(() => {
 
           {/* ── Sources & Credits ─────────────────────────────── */}
           <div class="border-t border-slate-800 pt-8">
-            <p class="text-sm text-slate-500 mb-4 uppercase tracking-wider font-medium">
+            <p class="text-sm text-slate-200 mb-4 uppercase tracking-wider font-medium">
               Data Sources
             </p>
-            <ul class="text-sm text-slate-400 leading-relaxed space-y-2 max-w-lg mx-auto list-none p-0">
+            <ul class="text-sm text-slate-100 leading-relaxed space-y-2 max-w-lg mx-auto list-none p-0">
               <li>
                 <a href="https://www.ipbes.net/global-assessment" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors underline decoration-slate-600 underline-offset-2">
                   IPBES Global Assessment (2019)
@@ -303,25 +303,25 @@ export default component$(() => {
                 </a>
               </li>
             </ul>
-            <p class="text-sm text-slate-500 mt-8">
+            <p class="text-sm text-slate-200 mt-8">
               Built with Qwik, D3.js, Tailwind CSS, and TopoJSON.
               <br />A Terra Studio capstone project — AI + Storytelling.
             </p>
 
             {/* Open source credits */}
-            <div class="flex items-center justify-center gap-4 mt-6 text-xs text-slate-600">
-              <span>MIT License · Open Source</span>
-              <span aria-hidden="true">·</span>
+            <div class="flex flex-wrap items-center justify-center gap-y-2 gap-x-4 mt-6 text-xs text-slate-600">
+              <span class="whitespace-nowrap">MIT License · Open Source</span>
+              <span aria-hidden="true" class="hidden sm:inline">·</span>
               <a
                 href="https://github.com/bodhicodes/m6-story"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="hover:text-slate-400 transition-colors"
+                class="hover:text-slate-100 transition-colors whitespace-nowrap"
               >
                 GitHub
               </a>
-              <span aria-hidden="true">·</span>
-              <a href="/about" class="hover:text-slate-400 transition-colors">
+              <span aria-hidden="true" class="hidden sm:inline">·</span>
+              <a href="/about" class="hover:text-slate-100 transition-colors whitespace-nowrap">
                 About this project
               </a>
             </div>

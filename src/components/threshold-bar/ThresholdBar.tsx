@@ -80,7 +80,7 @@ export const ThresholdBar = component$<ThresholdBarProps>((props) => {
     <div class="w-full max-w-xl mx-auto px-4">
       {/* ── Label ─────────────────────────────────────────────────── */}
       <div class="flex justify-between items-baseline mb-2">
-        <span class="text-sm text-slate-400 font-medium tracking-wide uppercase">
+        <span class="text-sm text-slate-100 font-medium tracking-wide uppercase">
           {props.label}
         </span>
         <span class="text-sm font-mono text-slate-300">
@@ -142,7 +142,7 @@ export const ThresholdBar = component$<ThresholdBarProps>((props) => {
         {[0, 25, 50, 75, 100].map((tick) => (
           <span
             key={tick}
-            class="absolute text-[10px] text-slate-500 font-mono"
+            class="absolute text-[10px] text-slate-200 font-mono"
             style={{
               left: `${tick}%`,
               transform: "translateX(-50%)",

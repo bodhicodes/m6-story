@@ -220,7 +220,7 @@ export const OverviewGlobe = component$(() => {
       />
 
       {/* ── Legend below the globe ───────────────────────────────── */}
-      <div class="flex flex-wrap justify-center gap-6 mt-8 max-w-lg">
+      <div class="flex flex-wrap justify-center gap-y-3 gap-x-6 mt-8 max-w-lg">
         {ecosystems.map((eco) => (
           <a
             key={eco.id}
@@ -228,13 +228,13 @@ export const OverviewGlobe = component$(() => {
             class="flex items-center gap-2 group"
           >
             <div
-              class="w-2.5 h-2.5 rounded-full group-hover:scale-125 transition-transform"
+              class="w-2.5 h-2.5 rounded-full group-hover:scale-125 transition-transform flex-shrink-0"
               style={{
                 backgroundColor: eco.globe.color,
                 boxShadow: `0 0 8px ${eco.globe.color}`,
               }}
             />
-            <span class="text-sm text-slate-400 group-hover:text-slate-200 transition-colors">
+            <span class="text-sm text-slate-100 group-hover:text-slate-200 transition-colors whitespace-nowrap">
               {eco.name}
             </span>
           </a>

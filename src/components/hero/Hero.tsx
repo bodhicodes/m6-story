@@ -33,7 +33,7 @@ export const Hero = component$(() => {
       />
 
       {/* ── Overline label ───────────────────────────────────────── */}
-      <p class="text-sm tracking-[0.3em] uppercase text-slate-500 mb-6 font-medium">
+      <p class="text-sm tracking-[0.3em] uppercase text-slate-200 mb-6 font-medium">
         A Visual Investigation
       </p>
 
@@ -48,12 +48,12 @@ export const Hero = component$(() => {
       </p>
 
       {/* ── Byline ───────────────────────────────────────────────── */}
-      <p class="mt-8 text-sm text-slate-500">
+      <p class="mt-8 text-sm text-slate-200">
         A capstone project exploring biodiversity tipping points
       </p>
 
       {/* ── Intro paragraph ──────────────────────────────────────── */}
-      <div class="mt-16 max-w-xl text-base text-slate-400 leading-relaxed space-y-4">
+      <div class="mt-16 max-w-xl text-base text-slate-100 leading-relaxed space-y-4">
         <p>
           Earth's most critical ecosystems — coral reefs, rainforests, polar
           ice, coastal wetlands, and grasslands — are approaching dangerous
