@@ -84,7 +84,7 @@ export default component$(() => {
             {" "}— the single source of truth for all content. Replace the five ecosystems with your own data and the entire page updates automatically.
           </p>
           <a
-            href="https://github.com/bodhicodes/m6-story"
+            href="https://github.com/bodhicodes/vanishing-earth-climate-storytelling"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-700 text-slate-300 hover:border-slate-200 hover:text-white transition-colors text-sm font-medium"

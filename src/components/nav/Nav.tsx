@@ -38,7 +38,7 @@ export const Nav = component$(() => {
             About
           </a>
           <a
-            href="https://github.com/bodhicodes/m6-story"
+            href="https://github.com/bodhicodes/vanishing-earth-climate-storytelling"
             target="_blank"
             rel="noopener noreferrer"
             class="text-slate-200 hover:text-white transition-colors"

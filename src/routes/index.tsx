@@ -315,7 +315,7 @@ export default component$(() => {
               <span class="whitespace-nowrap">MIT License · Open Source</span>
               <span aria-hidden="true" class="hidden sm:inline">·</span>
               <a
-                href="https://github.com/bodhicodes/m6-story"
+                href="https://github.com/bodhicodes/vanishing-earth-climate-storytelling"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="hover:text-slate-100 transition-colors whitespace-nowrap"
