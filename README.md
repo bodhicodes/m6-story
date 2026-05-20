@@ -106,6 +106,17 @@ Or connect the repository to Vercel via the dashboard for automatic deploys on p
 
 ---
 
+## Dataset Download
+
+The tipping-point and status data is published as a standalone dataset — free to use in your own projects, analyses, or visualizations:
+
+- [`public/data/ecosystems.json`](public/data/ecosystems.json) — full dataset with thresholds, stats, geographic region polygons, and per-ecosystem source citations
+- [`public/data/ecosystems.csv`](public/data/ecosystems.csv) — flat tabular version (one row per metric) for spreadsheets, Python, R, or Observable
+
+Both files are MIT licensed and include inline source attribution.
+
+---
+
 ## Data Sources
 
 The climate data in this reference implementation is sourced from peer-reviewed literature and authoritative datasets:

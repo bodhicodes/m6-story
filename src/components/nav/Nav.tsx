@@ -7,9 +7,11 @@
  * left, a subtle "About Terra Studio" link on the right.
  */
 
-import { component$ } from "@builder.io/qwik";
+import { component$, useSignal } from "@builder.io/qwik";
 
 export const Nav = component$(() => {
+  const dataMenuOpen = useSignal(false);
+
   return (
     <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 bg-slate-950/60 backdrop-blur-md border-b border-slate-800/50">
       <div class="max-w-6xl mx-auto flex items-center justify-between">
@@ -37,6 +39,66 @@ export const Nav = component$(() => {
           >
             About
           </a>
+
+          {/* ── Data download dropdown ─────────────────────────────── */}
+          <div class="relative">
+            <button
+              onClick$={() => { dataMenuOpen.value = !dataMenuOpen.value; }}
+              class="flex items-center gap-1 text-sm text-slate-100 hover:text-white transition-colors cursor-pointer"
+              aria-haspopup="true"
+              aria-expanded={dataMenuOpen.value}
+            >
+              Data
+              <svg
+                class={`w-3 h-3 transition-transform duration-200 ${dataMenuOpen.value ? "rotate-180" : ""}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2.5"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {dataMenuOpen.value && (
+              <div
+                class="absolute right-0 top-full mt-2 w-52 rounded-lg border border-slate-700 bg-slate-900/95 backdrop-blur-md shadow-xl py-1"
+                onClick$={() => { dataMenuOpen.value = false; }}
+              >
+                <div class="px-3 py-2 text-xs text-slate-500 uppercase tracking-wider font-medium border-b border-slate-800">
+                  Download dataset
+                </div>
+                <a
+                  href="/data/ecosystems.json"
+                  download="vanishing-earth-ecosystems.json"
+                  class="flex items-center gap-3 px-3 py-2.5 text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
+                >
+                  <svg class="w-4 h-4 shrink-0 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                  <span>
+                    JSON
+                    <span class="block text-xs text-slate-500">Full dataset + regions</span>
+                  </span>
+                </a>
+                <a
+                  href="/data/ecosystems.csv"
+                  download="vanishing-earth-ecosystems.csv"
+                  class="flex items-center gap-3 px-3 py-2.5 text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
+                >
+                  <svg class="w-4 h-4 shrink-0 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                  <span>
+                    CSV
+                    <span class="block text-xs text-slate-500">Flat table, spreadsheet-ready</span>
+                  </span>
+                </a>
+              </div>
+            )}
+          </div>
+
           <a
             href="https://github.com/bodhicodes/vanishing-earth-climate-storytelling"
             target="_blank"
